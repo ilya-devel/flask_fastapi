@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    News
+{% endblock %}
+
+{% block content %}
+<div class="container-lg d-flex flex-column bd-highlight mb-3">
+    {% for item in news %}
+    <div class="card p-2 bd-highligh">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-subtitle">{{ item.date }}</p>
+            <p class="card-text">{{ item.description }}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
