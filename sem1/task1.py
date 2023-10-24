@@ -50,14 +50,24 @@ def get_info_about_students():
 
 @app.route("/news/")
 def news():
-    news = [
-        {"title": "TITLE", "date": "24.10.2023", "description": "some newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome news"},
-        {"title": "TITLE", "date": "24.10.2023", "description": "some newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome news"},
-        {"title": "TITLE", "date": "24.10.2023", "description": "some newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome news"},
-        {"title": "TITLE", "date": "24.10.2023", "description": "some newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome news"},
-        {"title": "TITLE", "date": "24.10.2023", "description": "some newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome newssome news"},
+    news_ = [
+        {"title": "TITLE", "date": "24.10.2023",
+         "description": "some newssome newssome newssome newssome newssome newssome newssome newssome newssome \
+         newssome newssome newssome newssome newssome newssome news"},
+        {"title": "TITLE", "date": "24.10.2023",
+         "description": "some newssome newssome newssome newssome newssome newssome newssome newssome newssome \
+         newssome newssome newssome newssome newssome newssome news"},
+        {"title": "TITLE", "date": "24.10.2023",
+         "description": "some newssome newssome newssome newssome newssome newssome newssome newssome newssome \
+         newssome newssome newssome newssome newssome newssome news"},
+        {"title": "TITLE", "date": "24.10.2023",
+         "description": "some newssome newssome newssome newssome newssome newssome newssome newssome newssome \
+         newssome newssome newssome newssome newssome newssome news"},
+        {"title": "TITLE", "date": "24.10.2023",
+         "description": "some newssome newssome newssome newssome newssome newssome newssome newssome newssome \
+         newssome newssome newssome newssome newssome newssome news"},
     ]
-    return render_template("news2.html", news=news)
+    return render_template("news2.html", news=news_)
 
 
 if __name__ == '__main__':
