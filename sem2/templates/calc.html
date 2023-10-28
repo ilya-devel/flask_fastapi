@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Main Page{% endblock %}
+
+{% block content %}
+
+<h1>Calc</h1>
+<form method=post>
+    <input type=number name=a placeholder="Enter value">
+    <input type=number name=b placeholder="Enter value">
+    <select id="operation" name="operation">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+    <input type=submit value=Calculate>
+</form>
+
+
+{% endblock %}

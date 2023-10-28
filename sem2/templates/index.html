@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Main Page{% endblock %}
+
+{% block content %}
+
+
+
+<a href="{{ url_for('hello') }}">
+    <button class="btn btn-primary" type="submit">Приветствие</button>
+</a>
+<br>
+<a href="{{ url_for('upload_img') }}">
+    <img src="{{ url_for('static', filename='image/upload.png') }}" alt="---" width="100px" height="100px">
+</a>
+
+
+{% endblock %}

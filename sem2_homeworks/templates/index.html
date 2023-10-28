@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }}Home-page
+{% endblock %}
+
+<div class="container-sm mt-3">
+    {% block navbar %}
+            {% if name %}
+                <form action="{{ url_for('logout') }}">
+                    <input type="submit" value="Log Out, {{ name }}">
+                </form>
+            {% else %}
+                <form action="{{ url_for('login') }}">
+                    <input type="submit" value="Log In">
+                </form>
+            {% endif %}
+    {% endblock %}
+
+    {% block content %}
+        <h1 class="mt-5 text-center">Welcome
+        {% if name %}
+            {{ name }}
+        {% else %}
+            Anonimous
+        {% endif %}</h1>
+    {% endblock %}
+</div>
