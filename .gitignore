@@ -4,3 +4,4 @@ venv/
 
 #FILES
 *.zip
+*.sqlite
