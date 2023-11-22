@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Users
+{% endblock %}
+
+{% block content %}
+<div class="container-sm">
+    <p class="h1 text-center">Users</p>
+    <form method="post" action="{{ url_for('add_user') }}">
+        <div class="mb-3">
+            <label for="InputName1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="InputName1" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="InputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="InputEmail1" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="InputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="InputPassword1" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <hr class="my-5">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">DeleteUser</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+        <tr>
+            <th scope="row">{{ user.id }}</th>
+            <td><a href="{{ url_for('get_user', id=user.id) }}">{{ user.name }}</a></td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.password }}</td>
+            <td>
+                <!--                            <a href="{{ url_for('delete_user_html', id=user.id) }}">Delete</a>-->
+                <form method="post" action="{{ url_for('delete_user_html', id=user.id) }}">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
