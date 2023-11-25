@@ -1,8 +1,11 @@
 #DIRS
 venv/
 .idea/
+lesson*/
+*test*/
 
 #FILES
 *.zip
 *.sqlite
 *.jpg
+*.db
